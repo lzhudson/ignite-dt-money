@@ -17,7 +17,10 @@ type DataRegisterNewTrasaction = zod.infer<typeof schemaRegisterNewTransaction>
 
 export function NewTransactionModal() {
   const { control, register, handleSubmit, formState: { isSubmitting } } = useForm<DataRegisterNewTrasaction>({
-    resolver: zodResolver(schemaRegisterNewTransaction)
+    resolver: zodResolver(schemaRegisterNewTransaction),
+    defaultValues: {
+      type: 'income'
+    }
   })
   async function handleCreateNewTrasaction(data: DataRegisterNewTrasaction) {
     await new Promise(resolve => setTimeout(resolve, 2000))
