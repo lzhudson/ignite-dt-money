@@ -26,10 +26,10 @@
 
 # :rocket: Features
 
-* Init timer
-* Interrupt timer
-* Check history of started timers
-* Save in local storage
+* Insert transactions
+* Search transactions
+* Calculate summary of transactions
+* Connect to API
 
 # :construction_worker: Installation
 
@@ -56,6 +56,16 @@ yarn install
 
 ```
 yarn dev
+```
+
+This project uses the [JSON Server](https://github.com/typicode/json-server) library to simulate a server where we connect to an API to fetch transactions.
+
+In another window or tab of your terminal use the command below:
+
+**Start JSON Server**
+
+```
+yarn server
 ```
 
 # :bug: Issues
